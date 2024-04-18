@@ -6,10 +6,17 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "cp-dark-blue": "#252A34",
+        "cp-red": "#FF2E63",
+        "cp-whitesmoke": "#EAEAEA",
+        "cp-blue-light": "#08D9D6",
+      },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["light", "dark"],
+    themes: false,
   },
 };
