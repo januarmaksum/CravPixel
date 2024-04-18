@@ -4,8 +4,8 @@ import Logo from "@/assets/logo-cravpixel-horizontal.png";
 
 export default function Header() {
   return (
-    <header className="w-full lg:max-w-7xl mx-auto">
-      <div className="navbar">
+    <header className="w-full">
+      <div className="navbar md:!px-0 lg:max-w-7xl mx-auto">
         <div className="navbar-start">
           <Dropdown />
           <Link className="w-56" href="/">

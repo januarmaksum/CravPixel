@@ -10,5 +10,5 @@
 }
 
 .btn.btn-header {
-  @apply md:text-sm md:font-bold md:h-10 md:min-h-10 md:tracking-widest;
+  @apply md:text-sm md:font-semibold md:h-10 md:min-h-10 md:tracking-widest;
 }
