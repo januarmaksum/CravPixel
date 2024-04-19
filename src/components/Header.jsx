@@ -4,8 +4,8 @@ import Logo from "@/assets/logo-cravpixel-horizontal.png";
 
 export default function Header() {
   return (
-    <header className="w-full">
-      <div className="navbar md:!px-0 lg:max-w-7xl mx-auto">
+    <header className="sticky top-0 left-0 z-50">
+      <div className="lg:max-w-[95%] 2xl:max-w-7xl mx-auto container lg:!px-0 navbar">
         <div className="navbar-start">
           <Dropdown />
           <Link className="w-56" href="/">
@@ -19,10 +19,10 @@ export default function Header() {
           </Link>
         </div>
         <Navigation />
-        <div className="navbar-end">
+        <div className="hidden md:flex navbar-end">
           <Link
             href="/contact"
-            className="btn-xs md:btn-md btn btn-header bg-cp-red/80 hover:bg-cp-red/65 text-white md:uppercase"
+            className="btn md:tracking-widest md:font-semibold bg-cp-red/80 hover:bg-cp-red/65 text-white"
           >
             Chat with us
           </Link>

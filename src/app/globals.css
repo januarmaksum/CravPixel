@@ -9,6 +9,133 @@
   }
 }
 
-.btn.btn-header {
-  @apply md:text-sm md:font-semibold md:h-10 md:min-h-10 md:tracking-widest;
+.btn.btn-hero {
+  @apply bg-cp-red;
+}
+
+@keyframes diagonal-bounce {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(15px, -20px);
+  }
+}
+
+.bg-lines span {
+  top: 0;
+  z-index: -1;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(100 120 179 / 10%);
+  -webkit-animation: leftRightOne 10s infinite;
+  animation: leftRightOne 10s infinite;
+}
+
+.bg-lines span:nth-child(1) {
+  left: 20%;
+}
+
+.bg-lines span:nth-child(2) {
+  left: 40%;
+}
+
+.bg-lines span:nth-child(3) {
+  left: 60%;
+}
+
+.bg-lines span:nth-child(4) {
+  left: 80%;
+}
+
+@-webkit-keyframes leftRightOne {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+  }
+}
+
+@keyframes leftRightOne {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+  }
+}
+
+.hero-area-six:after,
+.hero-area-six:before {
+  content: "";
+  z-index: -1;
+  width: 500px;
+  height: 500px;
+  opacity: 0.2;
+  border-radius: 50%;
+  -webkit-filter: blur(200px);
+  filter: blur(200px);
+  position: absolute;
+  right: -250px;
+  top: 200px;
+  -webkit-animation: zoomInOut 5s infinite;
+  animation: zoomInOut 5s infinite;
+}
+
+.hero-area-six:before {
+  @apply bg-cp-red;
+}
+
+.hero-area-six:after {
+  @apply bg-cp-blue-light;
+}
+
+.hero-area-six:before {
+  left: -100px;
+}
+
+@-webkit-keyframes zoomInOut {
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}
+
+@keyframes zoomInOut {
+  0%,
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .hero-area-six:after {
+    content: "";
+    display: none;
+  }
+
+  .hero-area-six::before {
+    top: 0;
+    width: 300px;
+    height: 300px;
+  }
 }
