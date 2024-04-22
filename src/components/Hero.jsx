@@ -8,13 +8,17 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <div className="flex flex-col md:flex-row justify-between px-5 md:px-6 lg:px-0 lg:max-w-[95%] 2xl:max-w-7xl mx-auto container pt-10 lg:pt-40 xl:pt-48">
-      <div className="flex-none w-full md:w-[60%] mt-0 md:mt-20 text-center md:text-left">
-        <div className="text-cp-blue-light font-bold text-base md:text-xl xl:text-3xl md:mb-4">
+      <div className="flex-none w-full md:w-[60%] mt-0 md:mt-5 lg:mt-10 text-center md:text-left">
+        <div className="text-cp-blue-light font-medium text-base md:text-xl md:mb-4">
           Instant Website Creation Services
         </div>
-        <div className="lg:max-w-4xl">
-          <p className="text-3xl md:text-4xl xl:text-6xl font-extrabold !leading-tight text-balance">
+        <div className="xl:max-w-2xl">
+          <p className="text-3xl md:text-4xl xl:text-5xl font-extrabold !leading-tight text-balance">
             Your website is ready to go in just 48 hours
+          </p>
+          <p className="hidden md:block mt-4 text-sm lg:text-xl text-balance text-slate-300">
+            Create a website the way you want. The website is ready to use
+            straight away!
           </p>
         </div>
         <button className="btn bg-cp-red/80 hover:bg-cp-red/65 text-white mt-5 lg:btn-lg md:mt-10 lg:mt-14">
