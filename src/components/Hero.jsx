@@ -3,7 +3,6 @@ import bgHero1 from "@/assets/about17.jpg";
 import bgHero3 from "@/assets/about22.jpg";
 import bgHero4 from "@/assets/about20.jpg";
 import bgHero5 from "@/assets/about21.jpg";
-import Link from "next/link";
 
 export default function Hero() {
   return (
