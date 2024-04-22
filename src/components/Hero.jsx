@@ -21,8 +21,8 @@ export default function Hero() {
             straight away!
           </p>
         </div>
-        <button className="btn bg-cp-red/80 hover:bg-cp-red/65 text-white mt-5 lg:btn-lg md:mt-10 lg:mt-14">
-          Get Started Now
+        <button className="btn bg-cp-red/80 hover:bg-cp-red/65 text-white uppercase mt-5 lg:btn-lg md:mt-10 lg:mt-14">
+          Get Started
         </button>
       </div>
       <div className="flex items-center mx-auto mt-8 md:mt-0">
@@ -31,16 +31,16 @@ export default function Hero() {
             <Image
               priority
               src={bgHero4}
-              alt="design"
-              className="size-[150px] md:size-[120px] lg:size-[180px] xl:size-[240px] object-cover animate-border bg-gradient-to-r from-cp-red via-purple-500 to-cp-blue-light bg-[length:400%_400%] p-2"
+              alt="brief"
+              className="size-[150px] md:size-[120px] lg:size-[180px] xl:size-[200px] object-cover animate-border bg-gradient-to-r from-cp-red via-purple-500 to-cp-blue-light bg-[length:400%_400%] p-2"
             />
           </li>
           <li className="p-2">
             <Image
               priority
               src={bgHero3}
-              alt="design"
-              className="size-[150px] md:size-[120px] lg:size-[180px] xl:size-[240px] object-cover rounded-bl-[5rem] animate-border bg-gradient-to-r from-cp-red via-purple-500 to-cp-blue-light bg-[length:400%_400%] p-2"
+              alt="ideas"
+              className="size-[150px] md:size-[120px] lg:size-[180px] xl:size-[200px] object-cover rounded-bl-[5rem] animate-border bg-gradient-to-r from-cp-red via-purple-500 to-cp-blue-light bg-[length:400%_400%] p-2"
             />
           </li>
           <li
@@ -52,16 +52,16 @@ export default function Hero() {
             <Image
               priority
               src={bgHero1}
-              alt="design"
-              className="size-[150px] md:size-[120px] lg:size-[180px] xl:size-[240px] object-cover rounded-tr-[5rem] animate-border bg-gradient-to-r from-cp-red via-purple-500 to-cp-blue-light bg-[length:400%_400%] p-2 "
+              alt="mockup"
+              className="size-[150px] md:size-[120px] lg:size-[180px] xl:size-[200px] object-cover rounded-tr-[5rem] animate-border bg-gradient-to-r from-cp-red via-purple-500 to-cp-blue-light bg-[length:400%_400%] p-2 "
             />
           </li>
           <li className="p-2">
             <Image
               priority
               src={bgHero5}
-              alt="design"
-              className="size-[150px] md:size-[120px] lg:size-[180px] xl:size-[240px] object-cover animate-border bg-gradient-to-r from-cp-red via-purple-500 to-cp-blue-light bg-[length:400%_400%] p-2"
+              alt="deal"
+              className="size-[150px] md:size-[120px] lg:size-[180px] xl:size-[200px] object-cover animate-border bg-gradient-to-r from-cp-red via-purple-500 to-cp-blue-light bg-[length:400%_400%] p-2"
             />
           </li>
         </ul>

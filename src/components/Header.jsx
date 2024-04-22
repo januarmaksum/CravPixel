@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/assets/logo-cravpixel-horizontal.png";
+import nav from "@/data/navigation";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,8 +43,8 @@ export default function Header() {
         </div>
         <Navigation />
         <div className="hidden md:flex navbar-end">
-          <button className="btn md:tracking-widest md:font-semibold bg-cp-red/80 hover:bg-cp-red/65 text-white">
-            Chat with us
+          <button className="btn bg-cp-red/80 hover:bg-cp-red/65 text-white uppercase">
+            Contact us
           </button>
         </div>
       </div>
@@ -55,21 +56,18 @@ export function Navigation() {
   return (
     <nav className="navbar-center hidden lg:flex">
       <ul className="menu menu-horizontal px-1">
-        <li>
-          <Link href="/about" className="text-base tracking-widest">
-            About
-          </Link>
-        </li>
-        <li>
-          <Link href="/service" className="text-base tracking-widest">
-            Service
-          </Link>
-        </li>
-        <li>
-          <Link href="/portfolio" className="text-base tracking-widest">
-            Portfolio
-          </Link>
-        </li>
+        {nav
+          .filter((item) => item.label !== "Home")
+          .map((item) => (
+            <li key={item.path}>
+              <Link
+                href={item.path}
+                className="text-sm tracking-widest uppercase"
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
       </ul>
     </nav>
   );
