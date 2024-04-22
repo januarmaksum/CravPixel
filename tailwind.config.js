@@ -8,6 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        primary: "#FF2E63",
+        secondary: "#252A34",
         "cp-dark-blue": "#252A34",
         "cp-red": "#FF2E63",
         "cp-whitesmoke": "#EAEAEA",
@@ -26,7 +28,15 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["dark"],
+    themes: [
+      {
+        mytheme: {
+          primary: "#FF2E63",
+          secondary: "#252A34",
+        },
+      },
+      "dark",
+    ],
     darkTheme: "dark",
   },
 };
