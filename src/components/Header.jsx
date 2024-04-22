@@ -1,71 +1,53 @@
+"use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/assets/logo-cravpixel-horizontal.png";
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollClass = isScrolled ? "backdrop-blur-md" : "";
+
   return (
-    <header className="sticky top-0 left-0 z-50">
-      <div className="lg:max-w-[95%] 2xl:max-w-7xl mx-auto container lg:!px-0 navbar">
+    <header
+      className={`navbar lg:fixed left-0 right-0 z-50 bg-opacity-50 lg:!px-0 ${scrollClass}`}
+    >
+      <div className="lg:max-w-[95%] 2xl:max-w-7xl mx-auto container">
         <div className="navbar-start">
-          <Dropdown />
-          <Link className="w-56" href="/">
+          <Link href="/">
             <Image
               src={Logo}
               alt="CravPixel"
               width={224}
               height={48}
               priority
+              className="w-auto h-8 md:h-auto"
             />
           </Link>
         </div>
         <Navigation />
         <div className="hidden md:flex navbar-end">
-          <Link
-            href="/contact"
-            className="btn md:tracking-widest md:font-semibold bg-cp-red/80 hover:bg-cp-red/65 text-white"
-          >
+          <button className="btn md:tracking-widest md:font-semibold bg-cp-red/80 hover:bg-cp-red/65 text-white">
             Chat with us
-          </Link>
+          </button>
         </div>
       </div>
     </header>
-  );
-}
-
-export function Dropdown() {
-  return (
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h8m-8 6h16"
-          />
-        </svg>
-      </div>
-      <ul
-        tabIndex={0}
-        className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-      >
-        <li>
-          <a>About</a>
-        </li>
-        <li>
-          <a>Service</a>
-        </li>
-        <li>
-          <a>Portfolio</a>
-        </li>
-      </ul>
-    </div>
   );
 }
 

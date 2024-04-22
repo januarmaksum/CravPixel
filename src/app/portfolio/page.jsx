@@ -1,13 +1,13 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "CravPixel - About"
+  title: "CravPixel - Portfolio",
 };
 
-export default function About() {
+export default function Portfolio() {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center">
-      <h1 className="mb-4">About page</h1>
+      <h1 className="mb-4">Portfolio page</h1>
       <Link href={"/"} className="btn btn-primary">
         Home
       </Link>
