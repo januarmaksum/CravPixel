@@ -11,12 +11,6 @@ export default function CreateWebsite() {
       <div className="bg-gradient-radial" />
       <section className="lg:min-h-screen relative hero-area-six lg:overflow-x-hidden">
         <Header />
-        <div className="bg-lines hidden lg:block">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
         <Hero />
       </section>
     </div>
