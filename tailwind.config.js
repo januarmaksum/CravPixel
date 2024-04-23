@@ -17,11 +17,16 @@ module.exports = {
       },
       animation: {
         border: "border 4s ease infinite",
+        "diagonal-bounce": "diagonal-bounce 3s infinite",
       },
       keyframes: {
         border: {
           "0%, 100%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" },
+        },
+        "diagonal-bounce": {
+          "0%, 100%": { transform: "translate(0, 0)" },
+          "50%": { transform: "translate(15px, -20px)" },
         },
       },
     },

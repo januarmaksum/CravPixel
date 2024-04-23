@@ -43,7 +43,7 @@ export default function Header() {
         </div>
         <Navigation />
         <div className="hidden md:flex navbar-end">
-          <button className="btn bg-cp-red/80 hover:bg-cp-red/65 text-white">
+          <button className="btn bg-primary border-none hover:bg-primary/70 text-white">
             Gratis Konsultasi
           </button>
         </div>

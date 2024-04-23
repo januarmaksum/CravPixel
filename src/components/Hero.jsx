@@ -1,24 +1,42 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import bgHero1 from "@/assets/about17.jpg";
+import bgHero3 from "@/assets/about17.jpg";
 import bgHero2 from "@/assets/about22.jpg";
-import bgHero3 from "@/assets/about20.jpg";
+import bgHero1 from "@/assets/about20.jpg";
 import bgHero4 from "@/assets/about21.jpg";
 
 export default function Hero() {
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 60 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
     <div className="flex flex-col md:flex-row justify-between px-5 md:px-6 lg:px-0 lg:max-w-[95%] 2xl:max-w-7xl mx-auto container pt-10 lg:pt-40 xl:pt-48">
-      <div className="flex-none w-full md:w-[60%] mt-0 md:mt-5 text-center md:text-left">
+      <motion.div
+        className="flex-none w-full md:w-[60%] mt-0 md:mt-5 text-center md:text-left"
+        initial="hidden"
+        animate="visible"
+        variants={fadeInUp}
+      >
         <h2 className="text-cp-blue-light font-medium text-base md:text-xl mb-2 md:mb-4">
           Jasa Pembuatan Website Profesional
         </h2>
         <div className="xl:max-w-2xl">
-          <h1 className="text-2xl md:text-4xl xl:text-5xl font-extrabold !leading-tight text-balance">
+          <motion.h1
+            className="text-2xl md:text-4xl xl:text-5xl font-extrabold !leading-tight text-balance"
+            variants={fadeInUp}
+          >
             Solusi Cepat dan Hemat untuk Website Bisnis Anda
-          </h1>
-          <p className="hidden md:block mt-4 text-sm lg:text-xl text-balance text-slate-300">
+          </motion.h1>
+          <motion.p
+            className="hidden md:block mt-4 text-sm lg:text-xl text-balance text-slate-300 font-light"
+            variants={fadeInUp}
+          >
             Wujudkan website profesional untuk berbagai kebutuhan dengan design,
-            fitur dan teknologi website yang paling up-to-date! 🚀
-          </p>
+            fitur dan teknologi yang paling up-to-date! 🚀
+          </motion.p>
         </div>
         <div className="flex gap-3 justify-center md:justify-start">
           <button className="btn bg-primary text-white border-none hover:bg-primary/70 mt-5 lg:btn-lg md:mt-10 lg:mt-14">
@@ -28,48 +46,66 @@ export default function Hero() {
             Harga Website
           </button>
         </div>
-      </div>
-      <div className="flex items-center mx-auto mt-8 md:mt-0">
-        <ul className="columns-2 gap-0">
-          <li className="p-2">
-            <Image
-              priority
-              src={bgHero3}
-              alt="brief"
-              className="size-[150px] md:size-[120px] lg:size-[180px] xl:size-[200px] object-cover animate-border bg-gradient-to-r from-cp-red via-purple-500 to-cp-blue-light bg-[length:400%_400%] p-2"
-            />
-          </li>
-          <li className="p-2">
-            <Image
-              priority
-              src={bgHero2}
-              alt="ideas"
-              className="size-[150px] md:size-[120px] lg:size-[180px] xl:size-[200px] object-cover rounded-bl-[5rem] animate-border bg-gradient-to-r from-cp-red via-purple-500 to-cp-blue-light bg-[length:400%_400%] p-2"
-            />
-          </li>
-          <li
-            className="p-2 animate-diagonal-bounce"
-            style={{
-              animation: "diagonal-bounce 3s infinite",
-            }}
+      </motion.div>
+      <HeroObject />
+    </div>
+  );
+}
+
+export function HeroObject() {
+  const object = [
+    {
+      image: bgHero1,
+      alt: "brief",
+      className: "",
+      animateClass: "",
+    },
+    {
+      image: bgHero2,
+      alt: "ideas",
+      className: "rounded-bl-[5rem]",
+      animateClass: "",
+    },
+    {
+      image: bgHero3,
+      alt: "mockup",
+      className: "rounded-tr-[5rem]",
+      animateClass: "animate-diagonal-bounce",
+    },
+    {
+      image: bgHero4,
+      alt: "deal",
+      className: "",
+      animateClass: "",
+    },
+  ];
+
+  const fadeIn = {
+    hidden: { opacity: 0 },
+    visible: (i) => ({
+      opacity: 1,
+      transition: { delay: i * 0.2, duration: 0.6 },
+    }),
+  };
+
+  return (
+    <div className="flex items-center mx-auto mt-8 md:mt-0">
+      <motion.ul initial="hidden" animate="visible" className="columns-2 gap-0">
+        {object.map((item, index) => (
+          <motion.li
+            key={index}
+            variants={fadeIn}
+            className={`p-2 ${item.animateClass}`}
           >
             <Image
               priority
-              src={bgHero1}
-              alt="mockup"
-              className="size-[150px] md:size-[120px] lg:size-[180px] xl:size-[200px] object-cover rounded-tr-[5rem] animate-border bg-gradient-to-r from-cp-red via-purple-500 to-cp-blue-light bg-[length:400%_400%] p-2 "
+              src={item.image}
+              alt={item.alt}
+              className={`size-[150px] md:size-[120px] lg:size-[180px] xl:size-[200px] object-cover animate-border bg-gradient-to-r from-cp-red via-purple-500 to-cp-blue-light bg-[length:400%_400%] p-2 ${item.className}`}
             />
-          </li>
-          <li className="p-2">
-            <Image
-              priority
-              src={bgHero4}
-              alt="deal"
-              className="size-[150px] md:size-[120px] lg:size-[180px] xl:size-[200px] object-cover animate-border bg-gradient-to-r from-cp-red via-purple-500 to-cp-blue-light bg-[length:400%_400%] p-2"
-            />
-          </li>
-        </ul>
-      </div>
+          </motion.li>
+        ))}
+      </motion.ul>
     </div>
   );
 }
