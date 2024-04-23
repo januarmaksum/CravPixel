@@ -26,7 +26,7 @@ export default function BtmNav() {
   const isActive = (path) => (pathname === path ? activeClass : "");
 
   return (
-    <div className="btm-nav btm-nav-sm bg-secondary lg:hidden">
+    <div className="btm-nav btm-nav-sm lg:hidden">
       {nav.map(({ path, label, icon }) => (
         <button
           key={path}
