@@ -17,6 +17,10 @@ export default function Header() {
       }
     };
 
+    if (window.scrollY > 0) {
+      setIsScrolled(true);
+    }
+
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
@@ -29,7 +33,7 @@ export default function Header() {
       className={`navbar lg:fixed left-0 right-0 z-50 bg-opacity-50 lg:!px-0 ${scrollClass}`}
     >
       <div className="lg:max-w-[95%] 2xl:max-w-7xl mx-auto container">
-        <div className="navbar-start">
+        <div className="navbar-start flex">
           <Link href="/">
             <Image
               src={Logo}
@@ -37,7 +41,7 @@ export default function Header() {
               width={224}
               height={48}
               priority
-              className="w-auto md:w-[224px] h-8 md:h-auto"
+              className="w-auto md:w-[224px] h-8 md:h-auto md:-ml-[6px]"
             />
           </Link>
         </div>

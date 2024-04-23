@@ -10,6 +10,8 @@ module.exports = {
       colors: {
         primary: "#FF2E63",
         secondary: "#252A34",
+        "secondary-light": "#333a48",
+        "blue-light": "#08D9D6",
         "cp-dark-blue": "#252A34",
         "cp-red": "#FF2E63",
         "cp-whitesmoke": "#EAEAEA",
@@ -38,6 +40,8 @@ module.exports = {
         mytheme: {
           primary: "#FF2E63",
           secondary: "#252A34",
+          "secondary-light": "#333a48",
+          "blue-light": "#08D9D6",
         },
       },
       "dark",

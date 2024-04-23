@@ -21,7 +21,7 @@ export default function Hero() {
         variants={fadeInUp}
       >
         <h2 className="text-cp-blue-light font-medium text-base md:text-xl mb-2 md:mb-4">
-          Jasa Pembuatan Website Profesional
+          Jasa Pembuatan Website Berkualitas
         </h2>
         <div className="xl:max-w-2xl">
           <motion.h1
@@ -34,13 +34,12 @@ export default function Hero() {
             className="hidden md:block mt-4 text-sm lg:text-xl text-balance text-slate-300 font-light"
             variants={fadeInUp}
           >
-            Wujudkan website profesional untuk berbagai kebutuhan dengan design,
-            fitur dan teknologi yang paling up-to-date! 🚀
+            Wujudkan website profesional untuk berbagai kebutuhan dengan design dan fitur lengkap untuk merah kesuksesan online! 🚀
           </motion.p>
         </div>
         <div className="flex gap-3 justify-center md:justify-start">
           <button className="btn bg-primary text-white border-none hover:bg-primary/70 mt-5 lg:btn-lg md:mt-10 lg:mt-14">
-            Lihat Portfolio Kami
+            Pelajari Lebih Lanjut
           </button>
           <button className="btn btn-outline hover:bg-primary hover:border-primary hover:text-white text-white mt-5 lg:btn-lg md:mt-10 lg:mt-14">
             Harga Website

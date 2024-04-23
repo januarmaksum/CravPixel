@@ -22,63 +22,16 @@
   @apply inset-0 fixed pointer-events-none lg:hidden;
 }
 
-.hero-area-six::after,
-.hero-area-six::before {
-  content: "";
-  z-index: -1;
-  width: 500px;
-  height: 500px;
-  opacity: 0.2;
-  border-radius: 50%;
-  -webkit-filter: blur(200px);
-  filter: blur(200px);
-  position: absolute;
-  right: -250px;
-  top: 200px;
-  -webkit-animation: zoomInOut 5s infinite;
-  animation: zoomInOut 5s infinite;
+.scrolling-marquee {
+  animation: campoutscrollingmarquee 6s linear infinite;
+  animation-duration: 20s;
 }
 
-.hero-area-six::before {
-  @apply bg-cp-red;
-}
-
-.hero-area-six::after {
-  @apply bg-cp-blue-light;
-}
-
-.hero-area-six::before {
-  left: -100px;
-}
-
-@-webkit-keyframes zoomInOut {
-  0%,
+@keyframes campoutscrollingmarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-  }
-}
-
-@keyframes zoomInOut {
-  0%,
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .hero-area-six::after,
-  .hero-area-six::before {
-    content: "";
-    display: none;
+    transform: translate3d(-50%, 0, 0);
   }
 }
