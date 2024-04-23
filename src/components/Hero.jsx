@@ -113,7 +113,6 @@ export function HeroObject() {
             className={`p-2 ${item.animateClass}`}
           >
             <Image
-              priority
               src={item.image}
               alt={item.alt}
               className={`size-[150px] md:size-[120px] lg:size-[180px] xl:size-[200px] object-cover animate-border bg-gradient-to-r from-cp-red via-purple-500 to-cp-blue-light bg-[length:400%_400%] p-2 ${item.className}`}
