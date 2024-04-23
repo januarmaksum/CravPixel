@@ -11,7 +11,7 @@ const icons = {
 };
 
 const activeClass =
-  "active bg-cp-dark-blue text-cp-blue-light border-cp-blue-light";
+  "active bg-secondary text-blue-light border-blue-light";
 
 export default function BtmNav() {
   const router = useRouter();
