@@ -36,7 +36,7 @@ export default function Hero() {
               variants={fadeInUp}
             >
               Wujudkan website profesional untuk berbagai kebutuhan dengan
-              design dan fitur lengkap untuk merah kesuksesan online! 🚀
+              design dan fitur lengkap untuk meraih kesuksesan online! 🚀
             </motion.p>
           </div>
           <div className="flex gap-3 justify-center md:justify-start">
@@ -52,7 +52,6 @@ export default function Hero() {
       </div>
       <div className="custom-shape-divider-bottom-1713854242">
         <svg
-          data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
