@@ -13,41 +13,57 @@ export default function Hero() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row justify-between px-5 md:px-6 lg:px-0 lg:max-w-[95%] 2xl:max-w-7xl mx-auto container pt-10 lg:pt-40 xl:pt-48">
-      <motion.div
-        className="flex-none w-full md:w-[60%] mt-0 md:mt-5 text-center md:text-left"
-        initial="hidden"
-        animate="visible"
-        variants={fadeInUp}
-      >
-        <h2 className="text-cp-blue-light font-medium text-base md:text-xl mb-2 md:mb-4">
-          Jasa Pembuatan Website Berkualitas
-        </h2>
-        <div className="xl:max-w-2xl">
-          <motion.h1
-            className="text-2xl md:text-4xl xl:text-5xl font-extrabold !leading-tight text-balance"
-            variants={fadeInUp}
-          >
-            Solusi Cepat dan Hemat untuk Website Bisnis Anda
-          </motion.h1>
-          <motion.p
-            className="hidden md:block mt-4 text-sm lg:text-xl text-balance text-slate-300 font-light"
-            variants={fadeInUp}
-          >
-            Wujudkan website profesional untuk berbagai kebutuhan dengan design dan fitur lengkap untuk merah kesuksesan online! 🚀
-          </motion.p>
-        </div>
-        <div className="flex gap-3 justify-center md:justify-start">
-          <button className="btn bg-primary text-white border-none hover:bg-primary/70 mt-5 lg:btn-lg md:mt-10 lg:mt-14">
-            Pelajari Lebih Lanjut
-          </button>
-          <button className="btn btn-outline hover:bg-primary hover:border-primary hover:text-white text-white mt-5 lg:btn-lg md:mt-10 lg:mt-14">
-            Harga Website
-          </button>
-        </div>
-      </motion.div>
-      <HeroObject />
-    </div>
+    <section className="relative">
+      <div className="flex flex-col md:flex-row justify-between px-5 md:px-6 lg:px-0 lg:max-w-[95%] 2xl:max-w-7xl mx-auto container pt-10 lg:pt-40 xl:pt-48 pb-24 md:pb-32 lg:pb-44 xl:pb-60">
+        <motion.div
+          className="flex-none w-full md:w-[60%] mt-0 md:mt-5 text-center md:text-left"
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUp}
+        >
+          <h2 className="text-cp-blue-light font-medium text-base md:text-xl mb-2 md:mb-4">
+            Jasa Pembuatan Website Berkualitas
+          </h2>
+          <div className="xl:max-w-2xl">
+            <motion.h1
+              className="text-2xl md:text-4xl xl:text-5xl font-extrabold !leading-tight text-balance"
+              variants={fadeInUp}
+            >
+              Solusi Cepat dan Hemat untuk Website Bisnis Anda
+            </motion.h1>
+            <motion.p
+              className="hidden md:block mt-4 text-sm lg:text-xl text-balance text-slate-300 font-light"
+              variants={fadeInUp}
+            >
+              Wujudkan website profesional untuk berbagai kebutuhan dengan
+              design dan fitur lengkap untuk merah kesuksesan online! 🚀
+            </motion.p>
+          </div>
+          <div className="flex gap-3 justify-center md:justify-start">
+            <button className="btn bg-primary text-white border-none hover:bg-primary/70 mt-5 lg:btn-lg md:mt-10 lg:mt-14">
+              Pelajari Lebih Lanjut
+            </button>
+            <button className="btn btn-outline hover:bg-primary hover:border-primary hover:text-white text-white mt-5 lg:btn-lg md:mt-10 lg:mt-14">
+              Harga Website
+            </button>
+          </div>
+        </motion.div>
+        <HeroObject />
+      </div>
+      <div className="custom-shape-divider-bottom-1713854242">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z"
+            className="shape-fill"
+          ></path>
+        </svg>
+      </div>
+    </section>
   );
 }
 

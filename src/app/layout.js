@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
           sizes="<generated>"
         />
       </Head>
-      <body className={`${inter.className} pb-[100rem]`}>
+      <body className={`${inter.className}`}>
         {children} <BtmNav />
       </body>
     </html>

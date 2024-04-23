@@ -13,25 +13,28 @@
   @apply tracking-wider;
 }
 
-.bg-gradient-radial {
-  background: radial-gradient(
-    600px circle at 0 0,
-    rgba(29, 78, 216, 0.15),
-    transparent 80%
-  );
-  @apply inset-0 fixed pointer-events-none lg:hidden;
+.custom-shape-divider-bottom-1713854242 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
-.scrolling-marquee {
-  animation: campoutscrollingmarquee 6s linear infinite;
-  animation-duration: 20s;
+.custom-shape-divider-bottom-1713854242 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 229px;
 }
 
-@keyframes campoutscrollingmarquee {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-50%, 0, 0);
+.custom-shape-divider-bottom-1713854242 .shape-fill {
+  fill: #171a20;
+}
+
+@media screen and (max-width: 1279px) {
+  .custom-shape-divider-bottom-1713854242 svg {
+    height: 100px;
   }
 }
