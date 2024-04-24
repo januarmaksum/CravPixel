@@ -1,8 +1,7 @@
 "use client";
-import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Lenis from "@studio-freight/lenis";
+import scrollToElementById from "@/utils";
 import Image from "next/image";
 import bgHero3 from "@/assets/about17.jpg";
 import bgHero2 from "@/assets/about22.jpg";
@@ -10,23 +9,8 @@ import bgHero1 from "@/assets/about20.jpg";
 import bgHero4 from "@/assets/about21.jpg";
 
 export default function Hero() {
-  useEffect(() => {
-    const lenis = new Lenis();
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-    window.lenis = lenis;
-  }, []);
-
   const scrollToTarget = () => {
-    const targetElement = document.getElementById("whyUs");
-    if (targetElement && window.lenis) {
-      const top = targetElement.offsetTop;
-      window.lenis.scrollTo(top, { duration: 0.5, easing: (t) => t });
-    }
+    scrollToElementById("whyUs");
   };
 
   const fadeInUp = {
