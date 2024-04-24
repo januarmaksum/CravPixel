@@ -1,10 +1,12 @@
 import { Inter } from "next/font/google";
+import { Suspense, lazy } from "react";
 import Head from "next/head";
 import Providers from "@/components/ProgressBarProvider";
-import BtmNav from "@/components/BtmNav";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
+
+const BtmNav = lazy(() => import("@/components/BtmNav"));
 
 export const metadata = {
   title: "CravPixel",
@@ -24,7 +26,10 @@ export default function RootLayout({ children }) {
       </Head>
       <body className={`${inter.className}`}>
         <Providers>
-          {children} <BtmNav />
+          {children}
+          <Suspense>
+            <BtmNav />
+          </Suspense>
         </Providers>
       </body>
     </html>
