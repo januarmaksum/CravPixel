@@ -1,11 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useRouter } from "next-nprogress-bar";
 import Image from "next/image";
-import Link from "next/link";
 import Logo from "@/assets/logo-cravpixel-horizontal.png";
 import nav from "@/data/navigation";
 
 export default function Header() {
+  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -34,7 +35,7 @@ export default function Header() {
     >
       <div className="lg:max-w-[95%] 2xl:max-w-7xl mx-auto container">
         <div className="navbar-start flex">
-          <Link href="/">
+          <button onClick={() => router.push("/jasa-pembuatan-website")} className="flex">
             <Image
               src={Logo}
               alt="CravPixel"
@@ -43,7 +44,7 @@ export default function Header() {
               priority
               className="w-auto md:w-[224px] h-8 md:h-auto md:-ml-[6px]"
             />
-          </Link>
+          </button>
         </div>
         <Navigation />
         <div className="hidden md:flex navbar-end">
@@ -57,6 +58,8 @@ export default function Header() {
 }
 
 export function Navigation() {
+  const router = useRouter();
+
   return (
     <nav className="navbar-center hidden lg:flex">
       <ul className="menu menu-horizontal px-1">
@@ -64,12 +67,12 @@ export function Navigation() {
           .filter((item) => item.label !== "Home")
           .map((item) => (
             <li key={item.path}>
-              <Link
-                href={item.path}
+              <button
+                onClick={() => router.push(item.path)}
                 className="text-sm tracking-widest uppercase"
               >
                 {item.label}
-              </Link>
+              </button>
             </li>
           ))}
       </ul>

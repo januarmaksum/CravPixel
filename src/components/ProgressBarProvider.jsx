@@ -7,10 +7,11 @@ const Providers = ({ children }) => {
     <>
       {children}
       <ProgressBar
+        key={Date.now()}
         height="2px"
         color="#08D9D6"
         options={{ showSpinner: false }}
-        shallowRouting
+        disableSameURL
       />
     </>
   );
