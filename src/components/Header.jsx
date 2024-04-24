@@ -35,7 +35,7 @@ export default function Header() {
     >
       <div className="lg:max-w-[95%] 2xl:max-w-7xl mx-auto container">
         <div className="navbar-start flex">
-          <button onClick={() => router.push("/jasa-pembuatan-website")} className="flex">
+          <a href="/">
             <Image
               src={Logo}
               alt="CravPixel"
@@ -44,7 +44,7 @@ export default function Header() {
               priority
               className="w-auto md:w-[224px] h-8 md:h-auto md:-ml-[6px]"
             />
-          </button>
+          </a>
         </div>
         <Navigation />
         <div className="hidden md:flex navbar-end">
