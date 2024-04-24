@@ -1,16 +1,11 @@
-import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const About = dynamic(() => import("./About"));
 
 export const metadata = {
-  title: "CravPixel - About"
+  title: "CravPixel - About",
 };
 
-export default function About() {
-  return (
-    <div className="min-h-screen flex flex-col justify-center items-center">
-      <h1 className="mb-4">About page</h1>
-      <Link href={"/"} className="btn btn-primary">
-        Home
-      </Link>
-    </div>
-  );
+export default function AboutPage() {
+  return <About />;
 }

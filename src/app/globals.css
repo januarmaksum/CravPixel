@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    @apply bg-cp-dark-blue;
+    @apply bg-secondary;
     @apply text-white;
   }
 }

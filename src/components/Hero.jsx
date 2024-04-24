@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import bgHero3 from "@/assets/about17.jpg";
 import bgHero2 from "@/assets/about22.jpg";
@@ -12,25 +13,33 @@ export default function Hero() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
 
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.8,
+  });
+
   return (
     <section className="relative">
-      <div className="flex flex-col md:flex-row justify-between px-5 md:px-6 lg:px-0 lg:max-w-[95%] 2xl:max-w-7xl mx-auto container pt-10 lg:pt-40 xl:pt-48 pb-24 md:pb-32 lg:pb-44 xl:pb-60">
+      <div
+        ref={ref}
+        className="flex flex-col md:flex-row justify-between px-5 md:px-6 lg:px-0 lg:max-w-[95%] 2xl:max-w-7xl mx-auto container pt-10 lg:pt-40 xl:pt-48 pb-24 md:pb-32 lg:pb-44 xl:pb-60"
+      >
         <motion.div
           className="flex-none w-full md:w-[60%] mt-0 md:mt-5 text-center md:text-left"
           initial="hidden"
-          animate="visible"
+          animate={inView ? "visible" : "hidden"}
           variants={fadeInUp}
         >
-          <h2 className="text-cp-blue-light font-medium text-base md:text-xl mb-2 md:mb-4">
+          <h1 className="text-blue-light font-medium text-base md:text-xl mb-2 md:mb-4">
             Jasa Pembuatan Website Berkualitas
-          </h2>
+          </h1>
           <div className="xl:max-w-2xl">
-            <motion.h1
+            <motion.h2
               className="text-2xl md:text-4xl xl:text-5xl font-extrabold !leading-tight text-balance"
               variants={fadeInUp}
             >
               Solusi Cepat dan Hemat untuk Website Bisnis Anda
-            </motion.h1>
+            </motion.h2>
             <motion.p
               className="hidden md:block mt-4 text-sm lg:text-xl text-balance text-slate-300 font-light"
               variants={fadeInUp}
@@ -73,48 +82,63 @@ export function HeroObject() {
       alt: "brief",
       className: "",
       animateClass: "",
+      priority: false,
     },
     {
       image: bgHero2,
       alt: "ideas",
       className: "rounded-bl-[5rem]",
       animateClass: "",
+      priority: false,
     },
     {
       image: bgHero3,
       alt: "mockup",
       className: "rounded-tr-[5rem]",
       animateClass: "animate-diagonal-bounce",
+      priority: true,
     },
     {
       image: bgHero4,
       alt: "deal",
       className: "",
       animateClass: "",
+      priority: false,
     },
   ];
 
-  const fadeIn = {
-    hidden: { opacity: 0 },
+  const zoomIn = {
+    hidden: { opacity: 0, scale: 0.5 },
     visible: (i) => ({
       opacity: 1,
+      scale: 1,
       transition: { delay: i * 0.2, duration: 0.6 },
     }),
   };
 
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 1,
+  });
+
   return (
-    <div className="flex items-center mx-auto mt-8 md:mt-0">
-      <motion.ul initial="hidden" animate="visible" className="columns-2 gap-0">
+    <div ref={ref} className="flex items-center mx-auto mt-8 md:mt-0">
+      <motion.ul
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        className="columns-2 gap-0"
+      >
         {object.map((item, index) => (
           <motion.li
             key={index}
-            variants={fadeIn}
+            variants={zoomIn}
             className={`p-2 ${item.animateClass}`}
           >
             <Image
               src={item.image}
               alt={item.alt}
-              className={`size-[150px] md:size-[120px] lg:size-[180px] xl:size-[200px] object-cover animate-border bg-gradient-to-r from-cp-red via-purple-500 to-cp-blue-light bg-[length:400%_400%] p-2 ${item.className}`}
+              priority={item.priority}
+              className={`size-[150px] md:size-[120px] lg:size-[180px] xl:size-[200px] object-cover animate-border bg-gradient-to-r from-primary via-purple-500 to-blue-light bg-[length:400%_400%] p-2 ${item.className}`}
             />
           </motion.li>
         ))}

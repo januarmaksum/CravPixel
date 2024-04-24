@@ -1,16 +1,11 @@
-import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const Service = dynamic(() => import("./Service"));
 
 export const metadata = {
-  title: "CravPixel - Service"
+  title: "CravPixel - Service",
 };
 
-export default function Service() {
-  return (
-    <div className="min-h-screen flex flex-col justify-center items-center">
-      <h1 className="mb-4">Service page</h1>
-      <Link href={"/"} className="btn btn-primary">
-        Home
-      </Link>
-    </div>
-  );
+export default function ServicePage() {
+  return <Service />;
 }

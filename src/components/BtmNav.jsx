@@ -1,6 +1,7 @@
 "use client";
 import { GoHome, GoInfo, GoRocket, GoVersions } from "react-icons/go";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
+import { useRouter } from "next-nprogress-bar";
 import nav from "@/data/navigation";
 
 const icons = {

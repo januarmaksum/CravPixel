@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import Head from "next/head";
+import Providers from "@/components/ProgressBarProvider";
 import BtmNav from "@/components/BtmNav";
 import "./globals.css";
 
@@ -22,7 +23,9 @@ export default function RootLayout({ children }) {
         />
       </Head>
       <body className={`${inter.className}`}>
-        {children} <BtmNav />
+        <Providers>
+          {children} <BtmNav />
+        </Providers>
       </body>
     </html>
   );

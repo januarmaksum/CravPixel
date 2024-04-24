@@ -40,6 +40,7 @@ export default function Header() {
               alt="CravPixel"
               width={224}
               height={48}
+              priority
               className="w-auto md:w-[224px] h-8 md:h-auto md:-ml-[6px]"
             />
           </Link>
