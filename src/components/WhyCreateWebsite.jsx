@@ -37,7 +37,7 @@ export default function WhyCreateWebsite() {
   };
 
   return (
-    <section ref={ref} className="pt-20 pb-40 bg-[#171a20] -mt-1">
+    <section id="whyUs" ref={ref} className="pt-20 pb-40 bg-[#171a20] -mt-1">
       <div className="lg:max-w-[95%] 2xl:max-w-7xl mx-auto container">
         <div className="bg-[#171a20] px-5 md:px-0 xl:w-4/5 2xl:w-2/3 mx-auto md:py-10">
           <motion.h2
