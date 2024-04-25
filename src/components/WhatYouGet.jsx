@@ -86,17 +86,17 @@ export default function WhatYouGet() {
                 </motion.li>
               ))}
             </ul>
-            <div className="text-center md:text-left">
-              <motion.button
-                initial="hidden"
-                animate={isInView ? "visible" : "hidden"}
-                custom={{ delay: 0.9 }}
-                variants={fadeInUp}
-                className="mt-12 btn md:btn-lg bg-primary border-none hover:bg-primary/70 text-white"
-              >
+            <motion.div
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              custom={{ delay: 0.9 }}
+              variants={slideInLeft}
+              className="text-center md:text-left"
+            >
+              <button className="mt-12 btn md:btn-lg bg-primary border-none hover:bg-primary/70 text-white">
                 Pilih Template
-              </motion.button>
-            </div>
+              </button>
+            </motion.div>
           </div>
           {screenSize.width >= 1024 && <ObjectWhatYouGet />}
         </div>
