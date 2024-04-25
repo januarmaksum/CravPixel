@@ -1,11 +1,11 @@
 "use client";
-import { GoHome, GoInfo, GoRocket, GoVersions } from "react-icons/go";
+import { GoHomeFill, GoInfo, GoRocket, GoVersions } from "react-icons/go";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next-nprogress-bar";
 import nav from "@/data/navigation";
 
 const icons = {
-  GoHome: <GoHome />,
+  GoHome: <GoHomeFill />,
   GoInfo: <GoInfo />,
   GoRocket: <GoRocket />,
   GoVersions: <GoVersions />,
@@ -27,7 +27,7 @@ export default function BtmNav() {
   const isActive = (path) => (pathname === path ? activeClass : "");
 
   return (
-    <div className="btm-nav btm-nav-sm bg-[#1C232B] lg:hidden">
+    <div className="btm-nav btm-nav-sm bg-dark-secondary-800 lg:hidden">
       {nav.map(({ path, label, icon }) => (
         <button
           key={path}

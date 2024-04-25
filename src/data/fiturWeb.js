@@ -1,27 +1,33 @@
 const fiturWeb = [
   {
-    title: "Gratis Domain",
-    description: "Gratis domain untuk membuat identitas online Anda tanpa biaya tambahan.",
+    title: "Cepat",
+    description: "Sudah tidak berlaku lagi membuat website diperlukan waktu yang lama karena kami memastikan dalam waktu 2 hari websitemu sudah bisa digunakan.",
+    icon: "BiTimer"
   },
   {
-    title: "Gratis Hosting",
-    description: "Gratis hosting, sehingga Anda dapat menjalankan website dengan lancar tanpa khawatir tentang biaya server.",
+    title: "Mudah dan Murah",
+    description: "Membuat website di CravPixel sangat mudah karena kamu tinggal pesan, bayar, dan langsung kami proses.",
+    icon: "BiHappyBeaming"
   },
   {
-    title: "SEO Friendly",
-    description: "Kami membuat website yang SEO friendly, sehingga website Anda mudah ditemukan di mesin pencari.",
+    title: "Template Siap Pakai",
+    description: "Bosan dengan template yang sama? Kami menyediakan ratusan template yang siap digunakan untuk websitemu. Bebas tanpa batasan.",
+    icon: "BiLayout"
   },
   {
-    title: "Mobile Friendly",
-    description: "Kami membuat website yang mobile friendly, sehingga website dapat diakses pada perangkat apa saja.",
+    title: "Support SEO",
+    description: "Dengan adanya Search Engine Optimization (SEO) yang optimal dari kami akan membuat websitemu lebih mudah ditemukan di halaman pencarian Google.",
+    icon: "RiSeoLine"
   },
   {
-    title: "Pengoperasian Mudah",
-    description: "CMS yang mudah digunakan, memungkinkan Anda untuk mengelola konten website dengan mudah.",
+    title: "Layanan Prima 24/7",
+    description: "CravPixel adalah penyedia jasa web profesional. Jadi kamu tidak salah membuat website di sini. Buktikan cepatnya!",
+    icon: "BiSupport"
   },
   {
-    title: "Bantuan Konsultasi",
-    description: "Bantuan & konsultasi gratis dari tim kami yang berpengalaman untuk memastikan website Anda terus berjalan dengan optimal.",
+    title: "Gratis Domain Hosting",
+    description: "Kamu tidak perlu memikirkan permasalahan teknis di websitemu karena dengan biaya Rp 27.000/bulan kamu sudah mendapatkan GRATIS domain hosting selamanya.",
+    icon: "TbWorldWww"
   },
 ];
 

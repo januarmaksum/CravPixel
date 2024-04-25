@@ -14,6 +14,7 @@ module.exports = {
         "secondary-light": "#333a48",
         "blue-light": "#08D9D6",
         "dark-secondary": "#171a20",
+        "dark-secondary-800": "#1C232B",
       },
       animation: {
         border: "border 4s ease infinite",
@@ -42,6 +43,7 @@ module.exports = {
           "secondary-light": "#333a48",
           "blue-light": "#08D9D6",
           "dark-secondary": "#171a20",
+          "dark-secondary-800": "#1C232B",
         },
       },
       "dark",

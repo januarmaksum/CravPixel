@@ -6,7 +6,6 @@ import Logo from "@/assets/logo-cravpixel-horizontal.png";
 import nav from "@/data/navigation";
 
 export default function Header() {
-  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {

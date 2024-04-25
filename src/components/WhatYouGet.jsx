@@ -12,7 +12,7 @@ import useScreenSize from "@/hooks/useScreenSize";
 export default function WhatYouGet() {
   const screenSize = useScreenSize();
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
