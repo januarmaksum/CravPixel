@@ -1,7 +1,7 @@
 "use client";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import scrollToElementById from "@/utils";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { scrollToElementById } from "@/utils";
 import Image from "next/image";
 import bgHero3 from "@/assets/about17.jpg";
 import bgHero2 from "@/assets/about22.jpg";
@@ -9,6 +9,9 @@ import bgHero1 from "@/assets/about20.jpg";
 import bgHero4 from "@/assets/about21.jpg";
 
 export default function Hero() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+
   const scrollToTarget = () => {
     scrollToElementById("whyUs");
   };
@@ -17,11 +20,6 @@ export default function Hero() {
     hidden: { opacity: 0, y: 60 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
-
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.8,
-  });
 
   return (
     <section className="relative">
@@ -32,7 +30,7 @@ export default function Hero() {
         <motion.div
           className="flex-none w-full md:w-[60%] mt-0 md:mt-5 text-center md:text-left"
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          animate={isInView ? "visible" : "hidden"}
           variants={fadeInUp}
         >
           <h1 className="text-blue-light font-medium text-base md:text-xl mb-2 md:mb-4">
@@ -83,37 +81,40 @@ export default function Hero() {
   );
 }
 
+const object = [
+  {
+    image: bgHero1,
+    alt: "brief",
+    className: "",
+    animateClass: "",
+    priority: false,
+  },
+  {
+    image: bgHero2,
+    alt: "ideas",
+    className: "rounded-bl-[5rem]",
+    animateClass: "",
+    priority: false,
+  },
+  {
+    image: bgHero3,
+    alt: "mockup",
+    className: "rounded-tr-[5rem]",
+    animateClass: "animate-diagonal-bounce",
+    priority: true,
+  },
+  {
+    image: bgHero4,
+    alt: "deal",
+    className: "",
+    animateClass: "",
+    priority: false,
+  },
+];
+
 export function HeroObject() {
-  const object = [
-    {
-      image: bgHero1,
-      alt: "brief",
-      className: "",
-      animateClass: "",
-      priority: false,
-    },
-    {
-      image: bgHero2,
-      alt: "ideas",
-      className: "rounded-bl-[5rem]",
-      animateClass: "",
-      priority: false,
-    },
-    {
-      image: bgHero3,
-      alt: "mockup",
-      className: "rounded-tr-[5rem]",
-      animateClass: "animate-diagonal-bounce",
-      priority: true,
-    },
-    {
-      image: bgHero4,
-      alt: "deal",
-      className: "",
-      animateClass: "",
-      priority: false,
-    },
-  ];
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-500px 0px 0px 0px" });
 
   const zoomIn = {
     hidden: { opacity: 0, scale: 0.5 },
@@ -124,16 +125,11 @@ export function HeroObject() {
     }),
   };
 
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 1,
-  });
-
   return (
     <div ref={ref} className="flex items-center mx-auto mt-8 md:mt-0">
       <motion.ul
         initial="hidden"
-        animate={inView ? "visible" : "hidden"}
+        animate={isInView ? "visible" : "hidden"}
         className="columns-2 gap-0"
       >
         {object.map((item, index) => (

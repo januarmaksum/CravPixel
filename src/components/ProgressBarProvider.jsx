@@ -1,5 +1,4 @@
 "use client";
-
 import { useLenis } from "@/hooks/useLenis";
 import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 

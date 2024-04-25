@@ -1,22 +1,12 @@
 "use client";
-
-import { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import fiturWeb from "@/data/fiturWeb";
 
 export default function WhyCreateWebsite() {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    rootMargin: "-100px 0px",
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  console.log("isInView: ", isInView);
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
@@ -42,7 +32,7 @@ export default function WhyCreateWebsite() {
         <div className="bg-[#171a20] px-5 md:px-0 xl:w-4/5 2xl:w-2/3 mx-auto md:py-10">
           <motion.h2
             initial="hidden"
-            animate={controls}
+            animate={isInView ? "visible" : "hidden"}
             custom={{ delay: 0.5 }}
             variants={fadeInUp}
             className="text-2xl md:text-4xl xl:text-4xl text-center font-extrabold !leading-tight text-balance mb-6"
@@ -51,7 +41,7 @@ export default function WhyCreateWebsite() {
           </motion.h2>
           <motion.p
             initial="hidden"
-            animate={controls}
+            animate={isInView ? "visible" : "hidden"}
             custom={{ delay: 0.7 }}
             variants={fadeInUp}
             className="text-sm md:text-sm lg:text-base text-slate-200 xl:text-lg text-center text-balance font-extralight"
@@ -68,7 +58,7 @@ export default function WhyCreateWebsite() {
                 key={index}
                 className="flex flex-col"
                 initial="hidden"
-                animate={controls}
+                animate={isInView ? "visible" : "hidden"}
                 custom={{ delay: index * 0.3 }}
                 variants={zoomIn}
               >
