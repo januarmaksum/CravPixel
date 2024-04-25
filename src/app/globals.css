@@ -50,10 +50,10 @@ html.lenis, html.lenis body {
 }
 
 .custom-shape-divider-bottom-1713854242 .shape-fill {
-  fill: #171a20;
+  @apply fill-dark-secondary;
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1439px) {
   .custom-shape-divider-bottom-1713854242 svg {
     height: 100px;
   }

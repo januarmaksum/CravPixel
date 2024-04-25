@@ -6,7 +6,6 @@ import fiturWeb from "@/data/fiturWeb";
 export default function WhyCreateWebsite() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
-  console.log("isInView: ", isInView);
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
@@ -27,15 +26,15 @@ export default function WhyCreateWebsite() {
   };
 
   return (
-    <section id="whyUs" ref={ref} className="pt-20 pb-40 bg-[#171a20] -mt-1">
+    <section id="whyUs" ref={ref} className="pt-20 pb-40 bg-dark-secondary -mt-1">
       <div className="lg:max-w-[95%] 2xl:max-w-7xl mx-auto container">
-        <div className="bg-[#171a20] px-5 md:px-0 xl:w-4/5 2xl:w-2/3 mx-auto md:py-10">
+        <div className="px-5 md:px-0 xl:w-4/5 2xl:w-2/3 mx-auto md:pt-10">
           <motion.h2
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             custom={{ delay: 0.5 }}
             variants={fadeInUp}
-            className="text-2xl md:text-4xl xl:text-4xl text-center font-extrabold !leading-tight text-balance mb-6"
+            className="text-2xl md:text-4xl xl:text-5xl font-extrabold !leading-tight text-balance text-center mb-12"
           >
             Mengapa Harus Membuat Website di CravPixel?
           </motion.h2>
@@ -44,14 +43,14 @@ export default function WhyCreateWebsite() {
             animate={isInView ? "visible" : "hidden"}
             custom={{ delay: 0.7 }}
             variants={fadeInUp}
-            className="text-sm md:text-sm lg:text-base text-slate-200 xl:text-lg text-center text-balance font-extralight"
+            className="hidden text-sm md:text-sm lg:text-base text-slate-200 xl:text-lg text-center text-balance font-extralight"
           >
             Cukup berikan kami materi untuk website Anda dalam bentuk company
             profile, brosur atau apapun mengenai usaha Anda. Kami akan buatkan
             websitenya, merawat dan mengoptimalkannya.
           </motion.p>
         </div>
-        <div className="mt-10 px-5 md:px-6 lg:px-0">
+        <div className="px-5 md:px-6 lg:px-0">
           <ul className="list-inside grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 text-lg text-balance">
             {fiturWeb.map((fitur, index) => (
               <motion.li

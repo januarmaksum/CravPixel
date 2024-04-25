@@ -13,6 +13,7 @@ module.exports = {
         milk: "#EAEAEA",
         "secondary-light": "#333a48",
         "blue-light": "#08D9D6",
+        "dark-secondary": "#171a20",
       },
       animation: {
         border: "border 4s ease infinite",
@@ -40,6 +41,7 @@ module.exports = {
           milk: "#EAEAEA",
           "secondary-light": "#333a48",
           "blue-light": "#08D9D6",
+          "dark-secondary": "#171a20",
         },
       },
       "dark",

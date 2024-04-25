@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import WhatYouGet from "@/components/WhatYouGet";
 import WhyCreateWebsite from "@/components/WhyCreateWebsite";
 
 export const metadata = {
@@ -8,10 +9,11 @@ export const metadata = {
 
 export default function CreateWebsite() {
   return (
-    <div className="relative">
+    <>
       <Header />
       <Hero />
+      <WhatYouGet />
       <WhyCreateWebsite />
-    </div>
+    </>
   );
 }
