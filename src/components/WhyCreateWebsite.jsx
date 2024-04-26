@@ -41,7 +41,7 @@ export default function WhyCreateWebsite() {
   return (
     <section id="whyUs" ref={ref} className="pt-20 pb-40 bg-dark-secondary -mt-1">
       <div className="lg:max-w-[95%] 2xl:max-w-7xl mx-auto container">
-        <div className="px-5 md:px-0 xl:w-4/5 2xl:w-2/3 mx-auto md:pt-10">
+        <div className="px-5 md:px-0 xl:w-4/5 2xl:w-2/3 mx-auto md:pt-0 lg:pt-10">
           <motion.h2
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
@@ -76,7 +76,7 @@ export default function WhyCreateWebsite() {
               >
                 <div className="card w-full bg-secondary shadow-md flex-grow">
                   <div className="card-body gap-4 flex flex-col px-3 pt-3 pb-3 md:pb-8 md:pt-8 lg:px-8">
-                    <div className="rounded-2xl flex w-max p-4 bg-blue-light/5 text-blue-light shadow-md mb-0 lg:mb-4">
+                    <div className="rounded-2xl flex w-max p-4 bg-blue-light/5 text-blue-light shadow-md">
                       {icons[fitur.icon]}
                     </div>
                     <h3 className="card-title text-sm md:text-xl text-blue-light">

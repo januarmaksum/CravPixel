@@ -1,6 +1,6 @@
 const userGetForWeb = [
   {
-    description: "Gratis Cepat. Siap digunakan dalam 2 hari",
+    description: "Website Siap digunakan dalam 2 hari",
   },
   {
     description: "Mudah. Pesan, bayar, langsung proses",

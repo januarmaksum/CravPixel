@@ -30,7 +30,7 @@ export default function Header() {
 
   return (
     <header
-      className={`navbar lg:fixed left-0 right-0 z-50 bg-opacity-50 lg:!px-0 ${scrollClass}`}
+      className={`navbar 2xl:fixed left-0 right-0 z-50 bg-opacity-50 lg:!px-0 ${scrollClass}`}
     >
       <div className="lg:max-w-[95%] 2xl:max-w-7xl mx-auto container">
         <div className="navbar-start flex">

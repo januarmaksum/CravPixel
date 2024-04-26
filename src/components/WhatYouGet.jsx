@@ -57,7 +57,7 @@ export default function WhatYouGet() {
           Cocok untuk Website Company Profile, Toko Online, UMKM, Custom Web &
           Aplikasi Mobile
         </motion.p>
-        <div className="flex md:px-6 lg:px-0 mt-5 lg:mt-20">
+        <div className="flex md:px-6 lg:px-0 mt-8 lg:mt-20">
           <div className="flex-none w-full lg:flex-1">
             <motion.h2
               initial="hidden"
@@ -68,7 +68,7 @@ export default function WhatYouGet() {
             >
               Apa yang kamu dapatkan dalam jasa pembuatan website?
             </motion.h2>
-            <ul className="mt-10 flex gap-4 flex-col">
+            <ul className="mt-6 md:mt-10 flex gap-4 flex-col">
               {userGetForWeb.map((item, index) => (
                 <motion.li
                   key={index}
@@ -132,7 +132,7 @@ export function ObjectWhatYouGet() {
             <Image
               src={imgPuzzle}
               alt="puzzle like pixel"
-              className="w-[190px] h-[210px] object-cover ml-auto shadow-[7px_7px_0px_0px] shadow-primary border-2 border-black"
+              className="w-[190px] h-[210px] object-cover ml-auto animate-border bg-gradient-to-r from-primary via-purple-500 to-blue-light bg-[length:400%_400%] p-2"
             />
           </motion.div>
           <motion.div
@@ -145,7 +145,7 @@ export function ObjectWhatYouGet() {
             <Image
               src={imgMeeting}
               alt="meeting with partner"
-              className="size-[250px] object-cover ml-auto shadow-[7px_7px_0px_0px] shadow-primary border-2 border-black"
+              className="size-[250px] object-cover ml-auto animate-border bg-gradient-to-r from-primary via-purple-500 to-blue-light bg-[length:400%_400%] p-2"
             />
           </motion.div>
         </div>
@@ -160,7 +160,7 @@ export function ObjectWhatYouGet() {
             <Image
               src={imgWebdesigner}
               alt="web designer"
-              className="w-[250px] h-[400px] object-cover shadow-[7px_7px_0px_0px] shadow-primary border-2 border-black"
+              className="w-[250px] h-[400px] object-cover animate-border bg-gradient-to-r from-primary via-purple-500 to-blue-light bg-[length:400%_400%] p-2"
             />
           </motion.div>
         </div>
