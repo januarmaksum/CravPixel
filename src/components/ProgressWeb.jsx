@@ -75,7 +75,7 @@ export default function ProgressWeb() {
                       custom={{ delay: index * 0.5 }}
                       initial="hidden"
                       animate={isInView ? "visible" : "hidden"}
-                      className="text-sm md:text-xl text-blue-light font-semibold mb-2"
+                      className="text-base md:text-xl text-blue-light font-semibold mb-2"
                     >
                       {item.title}
                     </motion.h3>
