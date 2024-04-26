@@ -54,7 +54,7 @@ export default function WhatYouGet() {
           variants={fadeInUp}
           className="text-center text-sm md:text-base lg:text-xl tracking-wide text-balance text-slate-300"
         >
-          Cocok untuk Website Company Profile, Toko Online, UMKM, Custom Web &
+          Cocok untuk Website Company Profile, Blog, Toko Online, UMKM, Custom Web &
           Aplikasi Mobile
         </motion.p>
         <div className="flex md:px-6 lg:px-0 mt-8 lg:mt-20">
@@ -94,7 +94,7 @@ export default function WhatYouGet() {
               className="text-center md:text-left"
             >
               <button className="mt-12 btn md:btn-lg bg-primary border-none hover:bg-primary/70 text-white">
-                Pilih Template
+                Lihat Semua Desain
               </button>
             </motion.div>
           </div>

@@ -48,7 +48,7 @@ export default function Hero() {
               variants={fadeInUp}
             >
               Wujudkan website profesional untuk berbagai kebutuhan dengan
-              design dan fitur lengkap untuk meraih kesuksesan online! 🚀
+              desain dan fitur lengkap untuk meraih kesuksesan online! 🚀
             </motion.p>
           </div>
           <div className="flex gap-3 justify-center md:justify-start">

@@ -49,19 +49,19 @@ export default function WhyCreateWebsite() {
             variants={fadeInUp}
             className="text-2xl md:text-4xl xl:text-5xl font-extrabold !leading-tight text-balance text-center mb-10 md:mb-20"
           >
-            Mengapa Harus Membuat Website di CravPixel?
+            Mengapa Harus Membuat Website di <span className="text-primary">CravPixel</span>?
           </motion.h2>
-          <motion.p
+          {/* <motion.p
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             custom={{ delay: 0.7 }}
             variants={fadeInUp}
-            className="hidden text-sm md:text-sm lg:text-base text-slate-200 xl:text-lg text-center text-balance font-extralight"
+            className="text-sm md:text-sm lg:text-base text-slate-200 xl:text-lg text-center text-balance font-extralight"
           >
             Cukup berikan kami materi untuk website Anda dalam bentuk company
             profile, brosur atau apapun mengenai usaha Anda. Kami akan buatkan
             websitenya, merawat dan mengoptimalkannya.
-          </motion.p>
+          </motion.p> */}
         </div>
         <div className="px-5 md:px-6 lg:px-0">
           <ul className="list-inside grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 text-lg text-balance">
