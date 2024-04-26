@@ -39,15 +39,15 @@ export default function WhyCreateWebsite() {
   };
 
   return (
-    <section id="whyUs" ref={ref} className="pt-20 pb-40 bg-dark-secondary -mt-1">
+    <section id="whyUs" ref={ref} className="pt-20 pb-20 lg:pb-28 bg-dark-secondary -mt-1">
       <div className="lg:max-w-[95%] 2xl:max-w-7xl mx-auto container">
-        <div className="px-5 md:px-0 xl:w-4/5 2xl:w-2/3 mx-auto md:pt-0 lg:pt-10">
+        <div className="px-5 md:px-0 xl:w-4/5 2xl:w-2/3 mx-auto">
           <motion.h2
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
             custom={{ delay: 0.5 }}
             variants={fadeInUp}
-            className="text-2xl md:text-4xl xl:text-5xl font-extrabold !leading-tight text-balance text-center mb-10 md:mb-20"
+            className="text-2xl md:text-4xl xl:text-5xl font-extrabold !leading-tight text-balance text-center mb-10 lg:mb-16"
           >
             Mengapa Harus Membuat Website di <span className="text-primary">CravPixel</span>?
           </motion.h2>
@@ -64,7 +64,7 @@ export default function WhyCreateWebsite() {
           </motion.p> */}
         </div>
         <div className="px-5 md:px-6 lg:px-0">
-          <ul className="list-inside grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 text-lg text-balance">
+          <ul className="list-inside grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
             {fiturWeb.map((fitur, index) => (
               <motion.li
                 key={index}

@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next-nprogress-bar";
 import Image from "next/image";
-import Logo from "@/assets/logo-cravpixel-horizontal.png";
+import imgLogo from "@/assets/logo-cravpixel-horizontal.png";
 import nav from "@/data/navigation";
 
 export default function Header() {
@@ -29,14 +29,12 @@ export default function Header() {
   const scrollClass = isScrolled ? "backdrop-blur-md" : "";
 
   return (
-    <header
-      className={`navbar 2xl:fixed left-0 right-0 z-50 bg-opacity-50 lg:!px-0 ${scrollClass}`}
-    >
+    <header className={`navbar 2xl:fixed left-0 right-0 z-50 bg-opacity-50 ${scrollClass}`}>
       <div className="lg:max-w-[95%] 2xl:max-w-7xl mx-auto container">
         <div className="navbar-start flex">
           <a href="/">
             <Image
-              src={Logo}
+              src={imgLogo}
               alt="CravPixel"
               width={224}
               height={48}

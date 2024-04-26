@@ -3,10 +3,10 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { scrollToElementById } from "@/utils";
 import Image from "next/image";
-import bgHero3 from "@/assets/about17.jpg";
-import bgHero2 from "@/assets/about22.jpg";
-import bgHero1 from "@/assets/about20.jpg";
-import bgHero4 from "@/assets/about21.jpg";
+import imgMockup from "@/assets/mockup.jpg";
+import imgProduct from "@/assets/final-product.jpg";
+import imgBriefing from "@/assets/breafing.jpg";
+import imgDeals from "@/assets/deals.jpg";
 
 export default function Hero() {
   const ref = useRef(null);
@@ -22,10 +22,10 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative">
+    <section id="intro" className="relative">
       <div
         ref={ref}
-        className="flex flex-col md:flex-row justify-between px-5 md:px-6 lg:px-0 lg:max-w-[95%] 2xl:max-w-7xl mx-auto container pt-10 lg:pt-32 2xl:pt-48 pb-24 md:pb-32 lg:pb-44 xl:pb-48 2xl:pb-60"
+        className="flex flex-col md:flex-row justify-between px-5 md:px-6 lg:px-0 lg:max-w-[95%] 2xl:max-w-7xl mx-auto container pt-10 lg:pt-32 2xl:pt-52 pb-24 md:pb-32 lg:pb-44 xl:pb-48 2xl:pb-60"
       >
         <motion.div
           className="flex-none w-full md:w-[60%] mt-0 md:mt-5 text-center md:text-left"
@@ -83,28 +83,28 @@ export default function Hero() {
 
 const object = [
   {
-    image: bgHero1,
+    image: imgBriefing,
     alt: "brief",
     className: "",
     animateClass: "",
     priority: false,
   },
   {
-    image: bgHero2,
-    alt: "ideas",
+    image: imgProduct,
+    alt: "final product",
     className: "rounded-bl-[5rem]",
     animateClass: "",
     priority: false,
   },
   {
-    image: bgHero3,
+    image: imgMockup,
     alt: "mockup",
     className: "rounded-tr-[5rem]",
     animateClass: "animate-diagonal-bounce",
     priority: true,
   },
   {
-    image: bgHero4,
+    image: imgDeals,
     alt: "deal",
     className: "",
     animateClass: "",

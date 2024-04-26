@@ -6,10 +6,12 @@
   :root {
     @apply bg-secondary;
     @apply text-white;
+    --navbar-padding: 1rem 0;
   }
 }
 
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 
@@ -53,14 +55,49 @@ html.lenis, html.lenis body {
   @apply fill-dark-secondary;
 }
 
+.steps .step-error + .step-error:before,
+.steps .step-error:after {
+  @apply text-white font-extrabold text-2xl;
+}
+
+.steps .step-error + .step-error:before {
+  @apply bg-blue-light;
+}
+
+.steps .step-error:after {
+  @apply bg-blue-light text-black;
+}
+
+.steps-vertical .step {
+  grid-template-columns: 60px 1fr;
+  gap: 2.4rem;
+}
+
+.steps .step:after {
+  height: 3rem;
+  width: 3rem;
+}
+
 @media screen and (max-width: 1439px) {
   .custom-shape-divider-bottom-1713854242 svg {
     height: 100px;
   }
 }
 
+@media screen and (max-width: 1023px) {
+  @layer base {
+    :root {
+      --navbar-padding: 1rem;
+    }
+  }
+}
+
 @media screen and (max-width: 767px) {
   .btn {
     @apply tracking-normal;
+  }
+
+  .steps-vertical .step {
+    gap: 1.5rem;
   }
 }

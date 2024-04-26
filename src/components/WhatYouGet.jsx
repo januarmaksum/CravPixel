@@ -36,7 +36,7 @@ export default function WhatYouGet() {
     <section
       id="whatYouGet"
       ref={ref}
-      className="px-5 md:px-6 lg:px-0 pt-20 lg:pt-32 pb-20 md:pb-32 bg-dark-secondary -mt-1 overflow-hidden"
+      className="px-5 md:px-6 lg:px-0 pt-20 lg:pt-32 pb-20 lg:pb-32 bg-dark-secondary -mt-1 overflow-hidden"
     >
       <div className="lg:max-w-[95%] 2xl:max-w-7xl mx-auto container">
         <motion.h2
@@ -45,14 +45,14 @@ export default function WhatYouGet() {
           variants={fadeInUp}
           className="text-2xl md:text-4xl xl:text-5xl font-extrabold !leading-tight text-balance text-center mb-2 lg:mb-4"
         >
-          Bikin Website Sesuai Keinginanmu!
+          Buat Website Sesuai Keinginanmu!
         </motion.h2>
         <motion.p
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           custom={{ delay: 0.7 }}
           variants={fadeInUp}
-          className="text-center text-sm md:text-base lg:text-xl tracking-wide text-balance text-slate-300"
+          className="text-center font-light text-sm md:text-base lg:text-xl tracking-wide text-balance text-slate-300 lg:w-2/3 mx-auto"
         >
           Cocok untuk Website Company Profile, Blog, Toko Online, UMKM, Custom Web &
           Aplikasi Mobile
@@ -93,7 +93,7 @@ export default function WhatYouGet() {
               variants={slideInLeft}
               className="text-center md:text-left"
             >
-              <button className="mt-12 btn md:btn-lg bg-primary border-none hover:bg-primary/70 text-white">
+              <button className="mt-12 btn lg:btn-lg bg-primary border-none hover:bg-primary/70 text-white">
                 Lihat Semua Desain
               </button>
             </motion.div>
