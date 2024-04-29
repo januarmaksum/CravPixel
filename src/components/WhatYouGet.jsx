@@ -52,19 +52,19 @@ export default function WhatYouGet() {
           animate={isInView ? "visible" : "hidden"}
           custom={{ delay: 0.7 }}
           variants={fadeInUp}
-          className="text-center font-light text-sm md:text-base lg:text-xl md:tracking-wide text-balance text-slate-300 lg:w-2/3 mx-auto"
+          className="text-center font-light text-sm md:text-base lg:text-xl text-balance text-slate-300 lg:w-2/3 mx-auto"
         >
           Cocok untuk Website Company Profile, Blog, Toko Online, UMKM, Custom Web &
           Aplikasi Mobile
         </motion.p>
-        <div className="flex md:px-6 lg:px-0 mt-8 lg:mt-20">
+        <div className="flex lg:px-0 mt-8 lg:mt-20">
           <div className="flex-none w-full lg:flex-1">
             <motion.h2
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               custom={{ delay: 0.9 }}
               variants={fadeInUp}
-              className="text-xl text-center md:text-left lg:text-3xl font-bold text-balance lg:tracking-wide text-blue-light"
+              className="text-xl lg:text-3xl font-bold text-balance lg:tracking-wide text-blue-light"
             >
               Apa yang kamu dapatkan dalam jasa pembuatan website?
             </motion.h2>
@@ -93,7 +93,7 @@ export default function WhatYouGet() {
               variants={slideInLeft}
               className="text-center md:text-left"
             >
-              <button className="mt-12 btn lg:btn-lg bg-primary border-none hover:bg-primary/70 text-white">
+              <button className="mt-12 btn btn-wide lg:btn-lg bg-primary border-none hover:bg-primary/70 text-white">
                 Lihat Semua Desain
               </button>
             </motion.div>
