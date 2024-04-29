@@ -78,8 +78,30 @@ html.lenis body {
   width: 3rem;
 }
 
+.custom-shape-divider-top-1714370345 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1714370345 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 229px;
+}
+
+.custom-shape-divider-top-1714370345 .shape-fill {
+  fill: #171a20;
+}
+
 @media screen and (max-width: 1439px) {
-  .custom-shape-divider-bottom-1713854242 svg {
+  .custom-shape-divider-bottom-1713854242 svg,
+  .custom-shape-divider-top-1714370345 svg {
     height: 100px;
   }
 }

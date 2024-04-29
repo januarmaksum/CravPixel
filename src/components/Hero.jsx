@@ -12,10 +12,6 @@ export default function Hero() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
-  const scrollToTarget = () => {
-    scrollToElementById("whatYouGet");
-  };
-
   const fadeInUp = {
     hidden: { opacity: 0, y: 60 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -53,12 +49,15 @@ export default function Hero() {
           </div>
           <div className="flex gap-3 justify-center md:justify-start">
             <button
-              onClick={scrollToTarget}
+              onClick={() => scrollToElementById("whatYouGet")}
               className="btn bg-primary text-white border-none hover:bg-primary/70 mt-5 lg:btn-lg md:mt-10 lg:mt-14"
             >
               Pelajari Lebih Lanjut
             </button>
-            <button className="btn btn-outline hover:bg-primary hover:border-primary hover:text-white text-white mt-5 lg:btn-lg md:mt-10 lg:mt-14">
+            <button
+              onClick={() => scrollToElementById("priceWeb")}
+              className="btn btn-outline hover:bg-primary hover:border-primary hover:text-white text-white mt-5 lg:btn-lg md:mt-10 lg:mt-14"
+            >
               Harga Website
             </button>
           </div>

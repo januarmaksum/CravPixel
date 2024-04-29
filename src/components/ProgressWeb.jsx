@@ -29,7 +29,7 @@ export default function ProgressWeb() {
     <section
       id="progressWeb"
       ref={ref}
-      className="bg-dark-secondary pt-20 lg:pt-28 pb-32 -mt-1 overflow-hidden"
+      className="bg-dark-secondary pt-20 lg:pt-28 pb-20 lg:pb-40 -mt-1 overflow-hidden"
     >
       <div className="lg:max-w-[95%] 2xl:max-w-7xl mx-auto container">
         <div className="px-5 lg:px-0 flex flex-col xl:flex-row gap-4 xl:gap-16">
