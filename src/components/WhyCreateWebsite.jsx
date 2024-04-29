@@ -51,20 +51,9 @@ export default function WhyCreateWebsite() {
           >
             Mengapa Harus Membuat Website di <span className="text-primary">CravPixel</span>?
           </motion.h2>
-          {/* <motion.p
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            custom={{ delay: 0.7 }}
-            variants={fadeInUp}
-            className="text-sm md:text-sm lg:text-base text-slate-200 xl:text-lg text-center text-balance font-extralight"
-          >
-            Cukup berikan kami materi untuk website Anda dalam bentuk company
-            profile, brosur atau apapun mengenai usaha Anda. Kami akan buatkan
-            websitenya, merawat dan mengoptimalkannya.
-          </motion.p> */}
         </div>
         <div className="px-5 md:px-6 lg:px-0">
-          <ul className="list-inside grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
+          <ul className="list-inside grid grid-cols-2 md:grid-cols-3 gap-0 md:gap-3 xl:gap-6">
             {fiturWeb.map((fitur, index) => (
               <motion.li
                 key={index}
@@ -74,15 +63,15 @@ export default function WhyCreateWebsite() {
                 custom={{ delay: index * 0.3 }}
                 variants={zoomIn}
               >
-                <div className="card w-full bg-secondary shadow-md flex-grow">
+                <div className="card rounded-none border border-dark-secondary md:border-none md:rounded-2xl w-full bg-secondary shadow-md flex-grow">
                   <div className="card-body gap-4 flex flex-col px-3 pt-3 pb-3 md:pb-8 md:pt-8 lg:px-8">
                     <div className="rounded-2xl flex w-max p-4 bg-blue-light/5 text-blue-light shadow-md">
                       {icons[fitur.icon]}
                     </div>
-                    <h3 className="card-title text-sm md:text-xl text-blue-light">
+                    <h3 className="card-title text-base md:text-xl text-blue-light text-balance">
                       {fitur.title}
                     </h3>
-                    <p className="text-slate-200 font-extralight flex-grow text-xs md:text-sm lg:text-base xl:text-lg">
+                    <p className="text-slate-200 font-extralight flex-grow text-sm text-balance md:text-sm lg:text-base xl:text-lg">
                       {fitur.description}
                     </p>
                   </div>

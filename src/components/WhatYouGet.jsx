@@ -52,7 +52,7 @@ export default function WhatYouGet() {
           animate={isInView ? "visible" : "hidden"}
           custom={{ delay: 0.7 }}
           variants={fadeInUp}
-          className="text-center font-light text-sm md:text-base lg:text-xl tracking-wide text-balance text-slate-300 lg:w-2/3 mx-auto"
+          className="text-center font-light text-sm md:text-base lg:text-xl md:tracking-wide text-balance text-slate-300 lg:w-2/3 mx-auto"
         >
           Cocok untuk Website Company Profile, Blog, Toko Online, UMKM, Custom Web &
           Aplikasi Mobile

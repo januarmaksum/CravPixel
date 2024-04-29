@@ -25,7 +25,7 @@ export default function Hero() {
     <section id="intro" className="relative">
       <div
         ref={ref}
-        className="flex flex-col md:flex-row justify-between px-5 md:px-6 lg:px-0 lg:max-w-[95%] 2xl:max-w-7xl mx-auto container pt-10 lg:pt-32 2xl:pt-52 pb-24 md:pb-32 lg:pb-44 xl:pb-48 2xl:pb-60"
+        className="flex flex-col md:flex-row justify-between px-5 md:px-6 lg:px-0 lg:max-w-[95%] 2xl:max-w-7xl mx-auto container pt-10 lg:pt-24 2xl:pt-52 pb-24 md:pb-32 lg:pb-44 xl:pb-48 2xl:pb-60"
       >
         <motion.div
           className="flex-none w-full md:w-[60%] mt-0 md:mt-5 text-center md:text-left"

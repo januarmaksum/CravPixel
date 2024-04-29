@@ -52,7 +52,7 @@ export default function ProgressWeb() {
           animate={isInView ? "visible" : "hidden"}
           custom={{ delay: 0.7 }}
           variants={fadeInUp}
-          className="text-center font-light px-5 md:px-0 text-sm md:text-base lg:text-xl tracking-wide text-balance text-slate-300 lg:w-2/3 mx-auto"
+          className="text-center font-light px-5 md:px-0 text-sm md:text-base lg:text-xl md:tracking-wide text-pretty md:text-balance text-slate-300 lg:w-2/3 mx-auto"
         >
           Kami akan membantu memastikan bahwa kebutuhan dan keinginan Anda
           sesuai dengan hasil akhir
@@ -75,7 +75,7 @@ export default function ProgressWeb() {
                       custom={{ delay: index * 0.5 }}
                       initial="hidden"
                       animate={isInView ? "visible" : "hidden"}
-                      className="text-base md:text-xl text-blue-light font-semibold mb-2"
+                      className="text-base md:text-xl text-blue-light font-semibold mb-2 text-balance"
                     >
                       {item.title}
                     </motion.h3>
@@ -84,7 +84,7 @@ export default function ProgressWeb() {
                       custom={{ delay: index * 0.5 }}
                       initial="hidden"
                       animate={isInView ? "visible" : "hidden"}
-                      className="text-slate-200 font-extralight flex-grow text-xs md:text-sm lg:text-base xl:text-lg"
+                      className="text-slate-200 font-extralight flex-grow text-sm lg:text-base xl:text-lg"
                     >
                       {item.description}
                     </motion.p>
