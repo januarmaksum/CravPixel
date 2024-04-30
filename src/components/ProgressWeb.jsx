@@ -68,14 +68,7 @@ export default function ProgressWeb() {
           <div className="flex-auto lg:-mt-6 xl:-mt-2">
             <ul className="steps steps-vertical">
               {progresForWeb.map((item, index) => (
-                <motion.li
-                  initial="hidden"
-                  animate={isInView ? "visible" : "hidden"}
-                  custom={{ delay: 0.5 }}
-                  variants={fadeInUp}
-                  key={index}
-                  className="step step-error"
-                >
+                <li key={index} className="step step-error">
                   <div className="text-left py-4">
                     <motion.h3
                       variants={fadeInUp}
@@ -96,7 +89,7 @@ export default function ProgressWeb() {
                       {item.description}
                     </motion.p>
                   </div>
-                </motion.li>
+                </li>
               ))}
             </ul>
             <motion.div
