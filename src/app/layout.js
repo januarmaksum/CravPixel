@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Inter } from "next/font/google";
 import { Suspense, lazy } from "react";
 import Head from "next/head";
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
           <Suspense>
             <BtmNav />
           </Suspense>
+          <SpeedInsights />
         </Providers>
       </body>
     </html>
